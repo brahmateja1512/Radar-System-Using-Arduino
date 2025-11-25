@@ -24,65 +24,8 @@ This project integrates an Arduino UNO with a Processing interface. The Arduino 
 
 Component
 
-Quantity
+<img width="985" height="478" alt="image" src="https://github.com/user-attachments/assets/75567eb9-b372-47bb-a4df-7a61a7654490" />
 
-Description
-
-Arduino UNO
-
-1
-
-Main microcontroller
-
-HC-SR04
-
-1
-
-Ultrasonic Distance Sensor
-
-Servo Motor
-
-1
-
-SG90 Micro Servo (or similar)
-
-Breadboard
-
-1
-
-For prototyping
-
-Jumper Wires
-
-~10
-
-Male-to-Male connections
-
-USB Cable
-
-1
-
-Type A to B (for Arduino)
-
-🔌 Circuit Diagram & Connections
-
-1. Servo Motor
-
-Red Wire: +5V
-
-Brown/Black Wire: GND
-
-Orange/Signal Wire: Pin 12
-
-2. HC-SR04 Ultrasonic Sensor
-
-VCC: +5V
-
-GND: GND
-
-Trig: Pin 10
-
-Echo: Pin 11
 
 ⚠️ Important: Use the breadboard rails to share the single 5V and GND pins from the Arduino between both the Servo and the Sensor.
 
@@ -90,35 +33,22 @@ Echo: Pin 11
 
 Step 1: Hardware Assembly
 
-Mounting: Secure the Ultrasonic Sensor onto the Servo motor horn using electrical tape, hot glue, or a 3D-printed bracket.
-
-Base: Fix the Servo motor to a stationary base so only the horn (and sensor) rotates.
-
+Mounting: Secure the Ultrasonic Sensor onto the Servo motor horn using electrical tape, hot glue, or a 3D-printed bracket.Base: Fix the Servo motor to a stationary base so only the horn (and sensor) rotates.
 Wiring: Connect all components according to the Circuit Diagram.
 
 Step 2: Flash the Arduino
 
 Open the Arduino IDE.
-
 Load the file radar_arduino.ino.
-
 Connect your Arduino UNO to the PC.
-
 Select the correct Board and Port in Tools.
-
 Click Upload.
-
 Verify: Open Serial Monitor (9600 baud). You should see data streaming: 15,10., 16,10., etc.
-
 Close the Serial Monitor before proceeding to the next step.
 
 Step 3: Run the Visualization
 
-Download and install Processing 4.
-
-Open the file radar_processing.pde.
-
-Configuring the Port:
+Download and install Processing 4. Open the file radar_processing.pde. Configuring the Port:
 
 The script attempts to use the first available serial port (Serial.list()[0]).
 
